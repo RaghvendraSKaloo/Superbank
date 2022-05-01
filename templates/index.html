@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Wink Hosting (www.winkhosting.com)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" type="text/css" />
+	<title>RedTie</title>
+</head>
+<body>
+	<div id="page" align="center">
+		<div id="content" style="width:800px">
+			<div id="logo">
+				<div style="margin-top:70px" class="whitetitle">SuperBank</div>
+			</div>
+			<div id="topheader">
+				<div align="left" class="bodytext">
+					<br />
+					<strong>SuperBank</strong><br />
+					Main Branch : Rajapeth<br />
+					Amravati<br />
+					Phone: 432-653-3121<br />
+					info@superbank.com
+				</div>
+
+			</div>
+			<div id="menu">
+				<div align="right" class="smallwhitetext" style="padding:9px;">
+					<a href="{{ url_for('index') }}">Home</a> |
+					<a href="#">About Us</a> |
+					<a href="#">Products</a> |
+					<a href="#">Our Services</a> |
+					<a href="#">Contact Us</a>
+				</div>
+			</div>
+
+			<div id="contenttext">
+				<div style="padding:10px">
+					<span class="titletext">Welcome to SuperBank!</span>
+					</div>
+					<div class="bodytext" style="padding:12px;" align="justify">
+
+					We provide all modern banking services, online.
+                        <h2>{{ message }} </h2>
+				</div>
+			</div>
+			<div id="leftpanel">
+				<div align="justify" class="graypanel">
+					<span class="smalltitle">Users Area</span><br /><br />
+					<span class="smallredtext">User Login</span><br />
+					<form method="post" action="/loginUser">
+						<table>
+							<tr>
+								<td> Email ID</td>
+								<td> <input type="text" name="temail1" size="15"/></td>
+							</tr>
+							<tr>
+								<td> Password</td>
+								<td> <input type="password" name="tpass1" size="15" /></td>
+							</tr>
+
+							<tr>
+								<td><input type="checkbox" name="check" value="Remember Me"/> </td>
+								<td> Remember Me ? </td>
+							</tr>
+								<tr>
+								<td> </td>
+								<td> <input type="submit" value="LOGIN" /></td>
+							</tr>
+						</table>
+					</form>
+					<span class="smallredtext">User Signup</span><br />
+					<form method="post" action="/signupUser">
+						<table>
+							<tr>
+								<td> Name</td>
+								<td> <input type="text" name="name" size="15" /></td>
+							</tr>
+							<tr>
+								<td> Email ID</td>
+								<td> <input type="text" name="temail2" size="15" /></td>
+							</tr>
+							<tr>
+								<td> Password</td>
+								<td> <input type="password" name="tpass2" size="15" /></td>
+							</tr>
+							<tr>
+								<td> Confirm Password</td>
+								<td> <input type="password" name="tpass3" size="15" /></td>
+							</tr>
+							<tr>
+								<td> </td>
+								<td> <input type="submit" value="SIGNUP" /></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div id="footer" class="smallgraytext">
+				SuperBank &copy; 2021, All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</body>
+</html>

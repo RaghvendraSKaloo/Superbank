@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="author" content="Wink Hosting (www.winkhosting.com)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" type="text/css" />
+	<title>RedTie</title>
+</head>
+<body>
+	<div id="page" align="center">
+		<div id="content" style="width:800px">
+			<div id="logo">
+				<div style="margin-top:70px" class="whitetitle">SuperBank</div>
+			</div>
+			<div id="topheader">
+				<div align="left" class="bodytext">
+					<br />
+					<strong>SuperBank</strong><br />
+					Main Branch : Rajapeth<br />
+					Amravati<br />
+					Phone: 432-653-3121<br />
+					info@superbank.com
+				</div>
+
+			</div>
+			<div id="menu">
+				<div align="right" class="smallwhitetext" style="padding:9px;">
+					<a href="{{ url_for('userhome') }}">User Home</a> |
+					<a href="{{ url_for('myaccounts') }}">My Accounts</a> |
+					<a href="{{ url_for('trans') }}">Transactions</a> |
+					<a href="{{ url_for('mobile') }}">Mobile Rch</a> |
+					<a href="{{ url_for('funds') }}">Funds Tran</a> |
+                    <a href="{{ url_for('settings') }}">Settings</a> |
+                    <a href="{{ url_for('index') }}">Logout</a>
+				</div>
+			</div>
+
+			<div id="contenttext">
+				<div style="padding:10px">
+					<span class="titletext">Welcome to SuperBank!</span>
+					</div>
+					<div class="bodytext" style="padding:12px;" align="justify">
+					    <h2> Welcome back user <i style="color:red"> {{ session['emailid'] }} </i>!!! </h2>
+                        <h2> Funds Transfer </h2>
+						<p>
+							<h4> Transfer AMount </h4>
+							<form method="post" action="/fundsTrans">
+								<table>
+									<tr>
+										<td>
+											Enter Source Acno
+										</td>
+										<td>
+											<input type="text" name="tacno1" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Enter Target Acno
+										</td>
+										<td>
+											<input type="text" name="tacno2" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Enter Email
+										</td>
+										<td>
+											<input type="text" name="temail" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Enter Amount
+										</td>
+										<td>
+											<input type="text" name="tamt" />
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+
+										</td>
+										<td>
+											<input type="submit" value="Transfer Money" />
+										</td>
+									</tr>
+								</table>
+
+
+							</form>
+						</p>
+				</div>
+			</div>
+			<div id="leftpanel">
+				<div align="justify" class="graypanel">
+					<h4 style="color:red;text-align:center"> -: Our Services :-</h4>
+					<ui>
+						<li> Online Account Creation</li>
+						<li> Online Bank Transactions</li>
+						<li> Instant Funds Transfer</li>
+						<li> Utility Bill Payments</li>
+						<li> Request for Cheque Book</li>
+						<li> Instant Loans Facility</li>
+						<li> Create New Fixed Deposits</li>
+						<li> Offers on Card Transaction</li>
+					</ui>
+				</div>
+			</div>
+			<div id="footer" class="smallgraytext">
+				SuperBank &copy; 2021, All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
